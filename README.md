@@ -30,3 +30,55 @@ Efficient DOM manipulation techniques enhance user interactions.
 
 <img width="873" alt="image" src="https://github.com/user-attachments/assets/8ed49f9f-47c0-4d24-82c8-faf1287454a9">
 
+# Note-Taking App
+
+## How It Works
+
+### Welcome Screen
+**Purpose**: Introduces the app to users and transitions to the main interface.
+
+**Components**: A welcome message, brief description, "Get Started" button, and an image.
+
+**Implementation**:
+- The "Get Started" button hides the welcome screen and displays the main note-taking interface using JavaScript.
+
+### Main Note-Taking Interface
+**Purpose**: Allows users to manage their notes.
+
+**Components**:
+- Header with a welcome message and an "Add Note" button.
+- List of notes, each with edit and delete buttons.
+
+**Implementation**:
+- The "Add Note" button triggers a popup for creating new notes.
+- Notes are displayed in a list.
+- JavaScript functions handle creating, reading, updating, and deleting notes.
+
+### Creating a Note
+**Purpose**: Enable users to add new notes.
+
+**Components**: Popup with a text area and save button.
+
+**Implementation**:
+- Clicking the "Add Note" button opens the popup.
+- Users enter their note and click save.
+- The note is stored in `localStorage` and displayed in the main interface.
+
+### Editing a Note
+**Purpose**: Allow users to modify existing notes.
+
+**Components**: Popup with a text area pre-filled with the selected note's content and an update button.
+
+**Implementation**:
+- Clicking the edit button next to a note opens the popup.
+- Users update the note and click save.
+- The updated note is saved in `localStorage` and the main interface is refreshed.
+
+### Deleting a Note
+**Purpose**: Allow users to remove notes.
+
+**Components**: Delete button next to each note.
+
+**Implementation**:
+- Clicking the delete button removes the note from `localStorage`.
+- The note list is updated to reflect the deletion.
