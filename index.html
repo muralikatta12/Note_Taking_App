@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Note App</title>
+    <link rel="icon" href="icon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="intro-container" id="intro-container">
+        <h1>Welcome to the Notes Taking App</h1>
+        <p>This is your personal note-taking app where you can add and manage your notes.</p>
+        <p>Your notes will be saved safely, and you can review them anytime.</p>
+        <div class="cta">
+            <button onclick="getStarted()">Get Started</button>
+        </div>
+        
+        <div >
+            <div >
+                <img src="notebook.png" width="500" height="500"/>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <div id="container" style="display: none;">
+
+        <div id="list-header">
+            <h1>Welcome To Modern Note Taking App</h1>
+            <div id="addNoteDiv" onclick="popup()">
+                <i class="fas fa-plus-circle"></i>
+            </div>
+        </div>
+
+        <div id="list-container">
+            <ul id="notes-list"></ul>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        function getStarted() {
+            document.getElementById('intro-container').style.display = 'none';
+            document.getElementById('container').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

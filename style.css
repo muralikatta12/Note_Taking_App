@@ -1,0 +1,585 @@
+/* Main CSS */
+.text_color
+{
+    color:rgb(225, 54, 7)
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #8c53ff;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #f1f1f1;
+    width: 200px;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-content {
+    color: #333;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    margin-bottom: 10px;
+}
+
+#container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px 10px rgba(135, 133, 133, 0.3);
+    width: 1000px;
+    height: 450px;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+}
+
+#list-header {
+    width : 250px;
+    height : 100px;
+    padding :10px;
+    border : 3px  solid black;
+    margin : auto;
+     /* this makes text centerd */
+    text-align:center;
+    vertical-align:middle;
+    line-height:40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+#addNoteDiv {
+    background-color: hsl(243, 56%, 42%);
+    border: 1px solid #c7b9b9;
+    padding: 20px;
+    border-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animation */
+#addNoteDiv:hover {
+    transition: 0.10s;
+    background-color: #f1f1f1;
+}
+
+#addNoteDiv i {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+/* List CSS */
+#list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: flex;
+}
+
+li {
+    background-color: #fde464;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    width: 150px;
+    box-shadow: 9px 9px 18px #b3b3b3, -9px -9px 18px #ffffff;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.editBtn,
+.deleteBtn {
+    background-color: #ffffff;
+    color: #0f0f0f;
+    border: none;
+    padding: 6px 12px; 
+    margin: 5px; 
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px; 
+    width: calc(50% - 10px); /* Adjust width to fit half of the li width minus spacing */
+    left: 70%; 
+    transform: translateX(50%); /* Center horizontally */
+    text-align: center; /* Center text */
+}
+
+.deleteBtn {
+    left: calc(50% + 10px); /* Position delete button to the right of the edit button */
+}
+
+li span {
+    font-size: 10px;
+    flex-grow: 0;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    align-items:right;
+    scroll-behavior: smooth;
+}
+
+#editBtn {
+    background-color: #ffffff;
+}
+
+#deleteBtn:hover {
+    background-color: #8c53ff;
+}
+
+#editBtn:hover {
+    background-color: #8c53ff;
+}
+
+/* Create Note Popup CSS */
+#popupContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #464444;
+    box-shadow: 0 0 10px rgba(92, 77, 77, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#submitBtn, 
+#closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+#closeBtn {
+    background-color: rgb(0, 154, 177);
+}
+
+
+
+#submitBtn:hover {
+    background-color: #79787b;
+}
+
+#closeBtn:hover {
+    background-color: #79787b;
+}
+
+/* Editing Popup CSS */
+#editing-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(67, 66, 66, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#editing-container textarea {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+}
+
+#editing-container #btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#editing-container #submitBtn, 
+#editing-container #closeBtn {
+    width: 100px;
+    background-color: #9c80d6;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#editing-container #closeBtn {
+    background-color: rgb(76, 172, 186)o;
+}
+#editing-container #submitBtn:hover {
+    background-color: #79787b;
+}
+
+/* Sidebar CSS */
+.sidebar {
+    background-color: #f1f1f1;
+    width: 200px;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-content {
+    color: #333;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    margin-bottom: 10px;
+}
+
+/* Main Container CSS */
+#container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px 10px rgba(135, 133, 133, 0.3);
+    width: 1000px;
+    height: 450px;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+#list-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.blankDiv {
+    background-color: #fff;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addNoteDiv {
+    background-color: hsl(243, 56%, 42%);
+    border: 1px solid #c7b9b9;
+    padding: 20px;
+    border-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animation */
+#addNoteDiv:hover {
+    transition: 0.10s;
+    background-color: #f1f1f1;
+}
+
+#addNoteDiv i {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+/* List Container CSS */
+#list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+li {
+    background-color: #fde464;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    width: 150px;
+    box-shadow: 9px 9px 18px #b3b3b3, -9px -9px 18px #ffffff;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.editBtn,
+.deleteBtn {
+    background-color: #ffffff;
+    color: #0f0f0f;
+    border: none;
+    padding: 6px 12px; 
+    margin: 5px; 
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px; 
+    width: calc(50% - 10px); /* Adjust width to fit half of the li width minus spacing */
+    left: 70%; 
+    transform: translateX(50%); /* Center horizontally */
+    text-align: center; /* Center text */
+}
+
+.deleteBtn {
+    left: calc(50% + 10px); /* Position delete button to the right of the edit button */
+}
+
+li span {
+    font-size: 10px;
+    flex-grow: 0;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    align-items:right;
+    scroll-behavior: smooth;
+}
+
+#editBtn {
+    background-color: #ffffff;
+}
+
+#deleteBtn:hover {
+    background-color: #8c53ff;
+}
+
+#editBtn:hover {
+    background-color: #8c53ff;
+}
+
+/* Create Note Popup CSS */
+#popupContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #464444;
+    box-shadow: 0 0 10px rgba(92, 77, 77, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#submitBtn, 
+#closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+#closeBtn {
+    background-color: rgb(0, 154, 177);
+}
+
+
+
+#submitBtn:hover {
+    background-color: #79787b;
+}
+
+#closeBtn:hover {
+    background-color: #79787b;
+}
+
+/* Editing Popup CSS */
+#editing-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(67, 66, 66, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#editing-container textarea {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+}
+
+#editing-container #btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#editing-container #submitBtn, 
+#editing-container #closeBtn {
+    width: 100px;
+    background-color: #9c80d6;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#editing-container #closeBtn {
+    background-color: rgb(76, 172, 186);
+}
+#editing-container #submitBtn:hover {
+    background-color: #79787b;
+}
+
+#editing-container #closeBtn:hover {
+    background-color: #79787b;
+}
+
+
+#imagePreview {
+    margin-top: 10px;
+    max-width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+#imagePreview img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
