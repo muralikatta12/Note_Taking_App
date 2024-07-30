@@ -1,16 +1,24 @@
 # Notes_Taking_App
+
+## Table of contents
+-[Project Overview](#Project-Overview)
+-[Development Tools and Technologies](#Development-Tools-and-Technologies)
+-[Features](#Features)
+-[How It Works](#How-It-Works)
+-[Creating a Note](#Creating-a-Note)
 ### Project Overview
 
 This note-taking app is designed to provide users with a simple yet effective way to manage their notes. The app allows users to create, read, update, and delete notes, providing a seamless and intuitive user experience. Built with a focus on user-friendliness and performance, this app serves as a personal organizer, helping users keep track of their thoughts, tasks, and important information.
+
 ![Screenshot 2024-07-30 111125](https://github.com/user-attachments/assets/46d98512-4054-471c-8f0f-69ac2c3be50a)
 
 
 ### Development Tools and Technologies
-#### HTML: Structure of the web pages.
-#### CSS: Styling and layout of the app.
-#### JavaScript: Interactive functionality and logic.
-#### Font Awesome: Icons for enhanced visual appeal.
-#### localStorage: Data storage for notes and user information.
+- HTML: Structure of the web pages.
+- CSS: Styling and layout of the app.
+- JavaScript: Interactive functionality and logic.
+- Font Awesome: Icons for enhanced visual appeal.
+- localStorage: Data storage for notes and user information.
 
 ### Features
 #### Responsive Design:
@@ -30,7 +38,7 @@ Efficient DOM manipulation techniques enhance user interactions.
 
 <img width="873" alt="image" src="https://github.com/user-attachments/assets/8ed49f9f-47c0-4d24-82c8-faf1287454a9">
 
-# Note-Taking App
+
 
 ## How It Works
 
