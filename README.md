@@ -1,11 +1,11 @@
 # Notes_Taking_App
 
 ## Table of contents
--[Project Overview](#Project-Overview)
--[Development Tools and Technologies](#Development-Tools-and-Technologies)
--[Features](#Features)
--[How It Works](#How-It-Works)
--[Creating a Note](#Creating-a-Note)
+- [Project Overview](#Project-Overview)
+- [Development Tools and Technologies](#Development-Tools-and-Technologies)
+- [Features](#Features)
+- [How It Works](#How-It-Works)
+- [Creating a Note](#Creating-a-Note)
 ### Project Overview
 
 This note-taking app is designed to provide users with a simple yet effective way to manage their notes. The app allows users to create, read, update, and delete notes, providing a seamless and intuitive user experience. Built with a focus on user-friendliness and performance, this app serves as a personal organizer, helping users keep track of their thoughts, tasks, and important information.
